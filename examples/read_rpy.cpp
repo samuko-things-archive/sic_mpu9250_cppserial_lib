@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
   imu.connect(port);
 
   // wait for the imu to fully setup
-  for (int i=1; i<=30; i+=1){ 
+  for (int i=1; i<=10; i+=1){ 
     delay_ms(1000);
     std::cout << "configuring controller: " << i << " sec" << std::endl;
   }

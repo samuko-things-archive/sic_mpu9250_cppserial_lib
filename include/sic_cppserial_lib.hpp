@@ -60,7 +60,7 @@ public:
 
 
   void getRPY(float &roll, float &pitch, float &yaw){
-    get("rpy-est");
+    get("rpy");
 
     roll = val[0];
     pitch = val[1];
@@ -69,20 +69,27 @@ public:
     val[0] = 0.0;
     val[1] = 0.0;
     val[2] = 0.0;
+    val[3] = 0.0;
   }
 
-  void getHeading(float &yaw_abs){
-    get("heading");
 
-    yaw_abs = val[0];
+  void getQuat(float &qw, float &qx, float &qy, float &qz){
+    get("quat");
+
+    qw = val[0];
+    qx = val[1];
+    qy = val[2];
+    qz = val[3];
 
     val[0] = 0.0;
     val[1] = 0.0;
     val[2] = 0.0;
+    val[3] = 0.0;
   }
 
+
   void getRPYrate(float &roll_rate, float &pitch_rate, float &yaw_rate){
-    get("rpy-rate");
+    get("gyro-cal");
 
     roll_rate = val[0];
     pitch_rate = val[1];
@@ -91,9 +98,10 @@ public:
     val[0] = 0.0;
     val[1] = 0.0;
     val[2] = 0.0;
+    val[3] = 0.0;
   }
 
-  void getLinAcc(float &ax, float &ay, float &az){
+  void getAcc(float &ax, float &ay, float &az){
     get("acc-cal");
 
     ax = val[0];
@@ -103,10 +111,11 @@ public:
     val[0] = 0.0;
     val[1] = 0.0;
     val[2] = 0.0;
+    val[3] = 0.0;
   }
 
-  void getRPYrateCovariance(float &r, float &p, float &y){
-    get("rpy-rate-var");
+  void getRPYvariance(float &r, float &p, float &y){
+    get("rpy-var");
 
     r = val[0];
     p = val[1];
@@ -115,9 +124,23 @@ public:
     val[0] = 0.0;
     val[1] = 0.0;
     val[2] = 0.0;
+    val[3] = 0.0;
   }
 
-  void getLinAccCovariance(float &ax, float &ay, float &az){
+  void getRPYrateVariance(float &r, float &p, float &y){
+    get("gyro-var");
+
+    r = val[0];
+    p = val[1];
+    y = val[2];
+
+    val[0] = 0.0;
+    val[1] = 0.0;
+    val[2] = 0.0;
+    val[3] = 0.0;
+  }
+
+  void getAccVariance(float &ax, float &ay, float &az){
     get("acc-var");
 
     ax = val[0];
@@ -127,13 +150,14 @@ public:
     val[0] = 0.0;
     val[1] = 0.0;
     val[2] = 0.0;
+    val[3] = 0.0;
   }
 
 
 private:
   LibSerial::SerialPort serial_conn_;
   int timeout_ms_;
-  float val[3];
+  float val[4];
 
 
   std::string send_msg(const std::string &msg_to_send)
