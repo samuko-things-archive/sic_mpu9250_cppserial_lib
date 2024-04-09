@@ -1,4 +1,3 @@
-
 #include <sstream>
 #include <iostream>
 #include<unistd.h>
@@ -7,7 +6,7 @@
 
 #include <iomanip>
 
-#include "sic_cppserial_lib.hpp"
+#include "sic_mpu9250_cppserial_lib.hpp"
 
 SIC imu;
 

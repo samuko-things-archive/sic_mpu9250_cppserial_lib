@@ -154,6 +154,18 @@ public:
   }
 
 
+  void getGain(float &gain){
+    get("gain");
+
+    gain = val[0];
+
+    val[0] = 0.0;
+    val[1] = 0.0;
+    val[2] = 0.0;
+    val[3] = 0.0;
+  }
+
+
 private:
   LibSerial::SerialPort serial_conn_;
   int timeout_ms_;
