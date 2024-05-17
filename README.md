@@ -1,5 +1,5 @@
 # smc_cppserial_lib
-This is a child project of the Samuko IMU Compute (SIC) project. This library helps communicate with the already setup IMU (`MPU9250 module`) in you PC or microcomputer-based python projects, after successful setup with the [**`sic_mpu9250_setup_application`**](https://github.com/samuko-things-company/sic_mpu9250_setup_application).
+This is a child project of the Samuko IMU Compute (**`sic_mpu9250`**) project. This library helps communicate with the already setup IMU (`MPU9250 module`) in you PC or microcomputer-based python projects, after successful setup with the [**`sic_mpu9250_setup_application`**](https://github.com/samuko-things-company/sic_mpu9250_setup_application).
 
 > you can use it in your microcomputer robotics project **running on linux** (e.g Raspberry Pi, PC, etc.)
 
