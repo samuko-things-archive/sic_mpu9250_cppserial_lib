@@ -1,22 +1,23 @@
 # smc_cppserial_lib
-This is a child project of the Samuko IMU Compute (SIC) project. This library helps communicate with the already setup IMU (`MPU9250 module`) in you PC or microcomputer-based python projects, after successful setup with the [**`sic_calibration_py_codes`**](https://github.com/samuko-things-company/sic_calibration_py_codes).
+This is a child project of the Samuko IMU Compute (SIC) project. This library helps communicate with the already setup IMU (`MPU9250 module`) in you PC or microcomputer-based python projects, after successful setup with the [**`sic_mpu9250_setup_application`**](https://github.com/samuko-things-company/sic_mpu9250_setup_application).
 
 > you can use it in your microcomputer robotics project **running on linux** (e.g Raspberry Pi, PC, etc.)
 
 A simple way to get started is simply to try out and follow the example code in the example folder
 
+## Dependencies
+- you'll need to install the `libserial` library
+  ```shell
+    sudo apt-get update
+    sudo apt install libserial-dev
+  ```
 
 ## How to Use the Library
-- install the libserial-dev package
-  > sudo apt-get update
-  >
-  > sudo apt install libserial-dev
+- Download (by clicking on the green Code button above) or clone the repo into your PC using `git clone`
 
-- Ensure you have the **`sic_mpu9250_driver module`** interfaced with the **`MPU9250`** module. setup and cilibrate it using the **`sic_calibration_py_codes`**.
+- Ensure you have the **`sic_mpu9250_driver module`** interfaced with the **`MPU9250`** module and already calibrated.
 
-- Ensure you have the `madgwick filter code` (i.e **MODE 2**) running on the sic_mpu9250_driver module (i.e you should see the green led turned on).
-
-- Download (by clicking on the green Code button above) or clone the repo into your PC.
+- Connect the **`sic_mpu9250_driver module`** to your PC or microcomputer
 
 - A simple way to get started is simply to try out and follow the example `read_rpy.cpp` code.
 
@@ -36,7 +37,7 @@ A simple way to get started is simply to try out and follow the example code in 
     ./build/read_rpy
     ````
 
-- You can follow the pattern used in the example `read_rpy.cpp` in your own code.
+- You can follow the pattern used in the example `read_rpy.cpp` in your own code and use the cpp library as fit.
 
 
 ## Basic Library functions and usage
