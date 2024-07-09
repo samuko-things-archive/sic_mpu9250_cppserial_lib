@@ -51,8 +51,8 @@ A simple way to get started is simply to try out and follow the example code in 
 - get quaternions
   > getQuat(&qw, &qx, &qy, &qz)
 
-- get Roll, Pitch and Yaw rates value
-  > getRPYrate(&roll_rate, &pitch_rate, &yaw_rate)
+- get Roll(gx), Pitch(gy) and Yaw(gz) rates value
+  > getGyro(&gx, &gy, &gz)
 
 - get linear acceleration values ax, ay, az
   > getAcc(&ax, &ay, &az)
@@ -61,7 +61,7 @@ A simple way to get started is simply to try out and follow the example code in 
   > getRPYvariance(&r_var, &p_var, &y_var)
 
 - get rpy rate variances
-  > getRPYrateVariance(&r_var, &p_var, &y_var)
+  > getGyroVariance(&gx_var, &gy_var, &gz_var)
 
 - get acceleration variances
   > getAccVariance(&ax_var, &ay_, &az_var)
